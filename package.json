@@ -1,0 +1,22 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview"
+  },
+  "devDependencies": {
+    "nuxt": "3.0.0-rc.4",
+    "pug": "^3.0.2",
+    "pug-plain-loader": "^1.1.0",
+    "sass": "^1.54.4",
+    "sass-loader": "10"
+  },
+  "dependencies": {
+    "@pinia/nuxt": "^0.1.9",
+    "chart.js": "^3.9.1",
+    "pinia": "^2.0.14",
+    "vue-chart-3": "^3.1.8"
+  }
+}
