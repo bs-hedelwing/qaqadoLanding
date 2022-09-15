@@ -1,16 +1,17 @@
 <template>
   <button class="btn">
-    <slot> </slot>
+    <div class="btn__content">
+      <slot />
+    </div>
   </button>
 </template>
 
-
-<style>
+<style lang="scss">
 .btn {
   display: inline-flex;
   outline: none;
   border: none;
-  height: 50px;
+  height: 48px;
   border-radius: 20px;
   background: #1f87ff;
   cursor: pointer;
@@ -19,5 +20,9 @@
   align-items: center;
   justify-content: center;
   min-width: 190px;
+  &__content {
+    font-weight: 600;
+    font-size: 16px;
+  }
 }
 </style>

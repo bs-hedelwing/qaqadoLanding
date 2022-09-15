@@ -564,17 +564,6 @@
 <style lang="scss">
 @import "~/assets/variables.scss";
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-body {
-  font-family: "Inter", sans-serif;
-  font-weight: 500;
-  background-color: #fafcff;
-}
-
 .frame {
   background-image: linear-gradient(
     80.15deg,
@@ -630,7 +619,7 @@ body {
 
 .main-title {
   font-size: 25px;
-  line-height: 1.4em;
+  line-height: 1.6em;
   font-weight: 600;
   @media (min-width: #{map-get($breakpoints, "md")}px) {
     font-size: 36px;

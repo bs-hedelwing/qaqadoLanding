@@ -11,7 +11,9 @@
             style="display: flex; align-items: center; gap: 16px"
           >
             <div class="icon-container">
-              <div class="icon"></div>
+              <div class="icon">
+                <ui-icon :d="mdiCheck"></ui-icon>
+              </div>
             </div>
             <div>
               <h5 class="about-subtitle">Соцсетей много - платформа одна</h5>
@@ -77,6 +79,13 @@
     </ui-container>
   </section>
 </template>
+
+<script>
+import { mdiCheck } from "@mdi/js";
+export default {
+  data: () => ({ mdiCheck }),
+};
+</script>
 
 <style lang="scss">
 .icon {

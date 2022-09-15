@@ -1,0 +1,41 @@
+const client_manifest = {
+  "node_modules/nuxt/dist/app/entry.mjs": {
+    "file": "entry-768cff6b.mjs",
+    "src": "node_modules/nuxt/dist/app/entry.mjs",
+    "isEntry": true,
+    "dynamicImports": [
+      "pages/cabinet.vue",
+      "pages/index.vue"
+    ],
+    "css": [
+      "entry.4b0713b2.css"
+    ]
+  },
+  "pages/cabinet.vue": {
+    "file": "cabinet-04a20d2b.mjs",
+    "src": "pages/cabinet.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Row-9e8bad78.mjs",
+      "node_modules/nuxt/dist/app/entry.mjs"
+    ]
+  },
+  "_Row-9e8bad78.mjs": {
+    "file": "Row-9e8bad78.mjs",
+    "imports": [
+      "node_modules/nuxt/dist/app/entry.mjs"
+    ]
+  },
+  "pages/index.vue": {
+    "file": "index-ddd9f775.mjs",
+    "src": "pages/index.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_Row-9e8bad78.mjs",
+      "node_modules/nuxt/dist/app/entry.mjs"
+    ]
+  }
+};
+
+export { client_manifest as default };
+//# sourceMappingURL=client.manifest.mjs.map
