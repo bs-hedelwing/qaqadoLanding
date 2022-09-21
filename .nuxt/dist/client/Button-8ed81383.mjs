@@ -1,0 +1,1 @@
+import{_ as t,o,c as s,b as n,r as c}from"./entry-50e32e66.mjs";const _={},a={class:"btn"},r={class:"btn__content"};function d(e,l){return o(),s("button",a,[n("div",r,[c(e.$slots,"default")])])}var i=t(_,[["render",d]]);export{i as default};

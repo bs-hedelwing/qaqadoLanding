@@ -8,32 +8,108 @@
           flex-direction: column;
           justify-content: space-between;
           height: 100%;
+          min-height: 100vh;
           position: relative;
           padding-top: 92px;
-          padding-bottom: 40px;
+          padding-bottom: 32px;
         "
       >
-        <div style="flex-grow: 1">
-          <div class="row" style="align-items: center; height: 100%">
-            <div class="col cols-6">
-              <div style="display: grid; grid-gap: 28px">
-                <h1 class="main-title">
-                  <span class="text-primary">Единая платформа</span> для
-                  взаимодействия с социальными сетями
-                </h1>
-                <p class="text-secondary">
-                  Qaqado - самая удобная площадка для купли и продажи
-                  криптовалюты.
-                </p>
-                <div>
-                  <ui-button> Подробнее </ui-button>
-                </div>
+        <ui-grid-row style="align-items: center; height: 100%; flex-grow: 1">
+          <ui-grid-col :cols="12" :lg="6">
+            <div style="display: grid; grid-gap: 28px">
+              <h1 class="main-title">
+                <span class="text-primary">Единая платформа</span> для
+                взаимодействия с социальными сетями
+              </h1>
+              <p class="text-secondary">
+                Qaqado - самая удобная площадка для купли и продажи
+                криптовалюты.
+              </p>
+              <div>
+                <ui-button> Подробнее </ui-button>
               </div>
             </div>
-            <div class="col cols-6" style="position: relative; height: 100%">
+          </ui-grid-col>
+          <ui-grid-col :cols="12" :lg="6" style="height: 100%">
+            <div class="hero__image">
               <svg
-                style="position: absolute; right: 24px"
-                height="100%"
+                style="width: calc(100% + 16px); height: 100%"
+                viewBox="0 0 681 688"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  opacity="0.73"
+                  cx="669"
+                  cy="620"
+                  r="11"
+                  fill="#7BB4FD"
+                />
+                <circle
+                  opacity="0.73"
+                  cx="643.5"
+                  cy="283.504"
+                  r="8.5"
+                  fill="#7BB4FD"
+                />
+                <circle
+                  opacity="0.73"
+                  cx="168"
+                  cy="46.0044"
+                  r="11"
+                  fill="#7BB4FD"
+                />
+                <circle
+                  opacity="0.73"
+                  cx="598.5"
+                  cy="5.50146"
+                  r="5.5"
+                  fill="#7BB4FD"
+                />
+                <circle
+                  opacity="0.73"
+                  cx="605.5"
+                  cy="437.505"
+                  r="5.5"
+                  fill="#7BB4FD"
+                />
+                <circle
+                  opacity="0.73"
+                  cx="192.5"
+                  cy="263.504"
+                  r="5.5"
+                  fill="#7BB4FD"
+                />
+                <circle
+                  opacity="0.73"
+                  cx="5.5"
+                  cy="226.504"
+                  r="5.5"
+                  fill="#7BB4FD"
+                />
+                <circle
+                  opacity="0.73"
+                  cx="21.5"
+                  cy="484.505"
+                  r="5.5"
+                  fill="#7BB4FD"
+                />
+                <circle
+                  opacity="0.73"
+                  cx="484.5"
+                  cy="681.506"
+                  r="5.5"
+                  fill="#7BB4FD"
+                />
+              </svg>
+              <svg
+                style="
+                  position: absolute;
+                  right: 12px;
+                  top: 50%;
+                  width: calc(100% - 48px);
+                  transform: translateY(-50%);
+                "
                 viewBox="0 0 580 640"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -450,36 +526,24 @@
                 </defs>
               </svg>
             </div>
-          </div>
-        </div>
+          </ui-grid-col>
+        </ui-grid-row>
 
-        <div>
-          <div class="row">
-            <div class="col cols-3" style="align-items: stretch">
+        <div style="padding-top: 40px">
+          <ui-grid-row spacing="lg">
+            <ui-grid-col
+              :cols="12"
+              :md="6"
+              :lg="3"
+              v-for="(card, i) in 4"
+              :key="i"
+            >
               <ui-card primary style="text-align: center">
                 <h5 class="statictics-title text-primary">88 к</h5>
                 <p>Держателей токенов</p>
               </ui-card>
-            </div>
-            <div class="col cols-3">
-              <ui-card primary style="text-align: center">
-                <h5 class="statictics-title text-primary">88 к</h5>
-                <p>Держателей токенов</p>
-              </ui-card>
-            </div>
-            <div class="col cols-3">
-              <ui-card primary style="text-align: center">
-                <h5 class="statictics-title text-primary">88 к</h5>
-                <p>Держателей токенов</p>
-              </ui-card>
-            </div>
-            <div class="col cols-3">
-              <ui-card primary style="text-align: center">
-                <h5 class="statictics-title text-primary">88 к</h5>
-                <p>Держателей токенов</p>
-              </ui-card>
-            </div>
-          </div>
+            </ui-grid-col></ui-grid-row
+          >
         </div>
       </ui-container>
     </div>
@@ -492,8 +556,8 @@
           <span> Структура токена </span>
         </h2>
 
-        <div class="row">
-          <div class="col cols-3">
+        <ui-grid-row spacing="md">
+          <ui-grid-col :cols="12" :lg="3">
             <ui-grid-row spacing="md">
               <ui-grid-col :cols="12">
                 <ui-card>Частная продажа </ui-card>
@@ -505,8 +569,8 @@
                 <ui-card>Частная продажа </ui-card>
               </ui-grid-col>
             </ui-grid-row>
-          </div>
-          <div class="col cols-6">
+          </ui-grid-col>
+          <ui-grid-col :cols="12" :lg="6">
             <ui-card>
               <div style="display: flex; justify-content: space-between">
                 <div>Всего продано токенов:</div>
@@ -525,8 +589,8 @@
                 <ui-button>Купить токен</ui-button>
               </div>
             </ui-card>
-          </div>
-          <div class="col cols-3">
+          </ui-grid-col>
+          <ui-grid-col :cols="12" :lg="3">
             <ui-grid-row spacing="md">
               <ui-grid-col :cols="12">
                 <ui-card>Частная продажа </ui-card>
@@ -538,8 +602,8 @@
                 <ui-card>Частная продажа </ui-card>
               </ui-grid-col>
             </ui-grid-row>
-          </div>
-        </div>
+          </ui-grid-col>
+        </ui-grid-row>
       </ui-container>
     </section>
 
@@ -589,42 +653,15 @@
   background-position: center;
 }
 
-.row {
-  display: flex;
-  width: calc(100% + 40px);
-  margin: -20px;
-  flex-wrap: wrap;
-}
-
-.col {
-  padding: 20px;
-}
-
-@media (min-width: #{map-get($breakpoints, "md")}px) {
-  .cols-md-3 {
-    flex: calc(100% / 12 * 3) 0 0;
-    max-width: calc(100% / 12 * 3);
-  }
-}
-
-.cols-3 {
-  flex: calc(100% / 12 * 3) 0 0;
-  max-width: calc(100% / 12 * 3);
-}
-
-.cols-6 {
-  flex: calc(100% / 12 * 6) 0 0;
-  max-width: calc(100% / 12 * 6);
-}
-
 .main-title {
   font-size: 25px;
-  line-height: 1.6em;
+  line-height: 1.4em;
   font-weight: 600;
   @media (min-width: #{map-get($breakpoints, "md")}px) {
-    font-size: 36px;
+    font-size: 32px;
   }
   @media (min-width: #{map-get($breakpoints, "xl")}px) {
+    line-height: 1.6em;
     font-size: 48px;
   }
 }
@@ -666,10 +703,16 @@
 }
 
 .statictics-title {
-  font-size: 40px;
+  font-size: 24px;
   line-height: 1em;
   font-weight: 600;
   margin: 0;
+  @media (min-width: #{map-get($breakpoints, "md")}px) {
+    font-size: 28px;
+  }
+  @media (min-width: #{map-get($breakpoints, "xl")}px) {
+    font-size: 40px;
+  }
 }
 
 .text-primary {
@@ -722,6 +765,37 @@
   }
   50% {
     transform: translate(0) scale(1);
+  }
+}
+
+circle {
+  opacity: 0.3;
+  animation: circle infinite alternate 1.8s;
+
+  &:nth-child(3n + 1) {
+    animation-delay: 0.6s;
+  }
+  &:nth-child(3n + 2) {
+    animation-delay: 1.2s;
+  }
+}
+
+@keyframes circle {
+  to {
+    opacity: 0.75;
+  }
+}
+
+.hero__image {
+  position: relative;
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto;
+  @media (min-width: #{map-get($breakpoints, "md")}px) {
+    max-width: 400px;
+  }
+  @media (min-width: #{map-get($breakpoints, "xl")}px) {
+    max-width: initial;
   }
 }
 </style>

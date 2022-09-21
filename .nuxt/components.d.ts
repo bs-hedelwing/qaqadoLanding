@@ -5,10 +5,14 @@ declare module 'vue' {
     'Chart': typeof import("../components/Chart.vue")['default'],
     'FilterMenu': typeof import("../components/FilterMenu.vue")['default'],
     'Header': typeof import("../components/Header.vue")['default'],
+    'IconsLogo': typeof import("../components/icons/logo.vue")['default'],
+    'IconsPeople': typeof import("../components/icons/people.vue")['default'],
+    'IconsRocket': typeof import("../components/icons/rocket.vue")['default'],
     'UiButton': typeof import("../components/ui/Button.vue")['default'],
     'UiContainer': typeof import("../components/ui/Container.vue")['default'],
     'UiIcon': typeof import("../components/ui/Icon.vue")['default'],
     'UiSlider': typeof import("../components/ui/Slider.vue")['default'],
+    'UiTable': typeof import("../components/ui/Table.vue")['default'],
     'UiTypography': typeof import("../components/ui/Typography.vue")['default'],
     'UiCardTitle': typeof import("../components/ui/Card/CardTitle.vue")['default'],
     'UiCard': typeof import("../components/ui/Card/index.vue")['default'],
@@ -24,10 +28,14 @@ declare module 'vue' {
     'LazyChart': typeof import("../components/Chart.vue")['default'],
     'LazyFilterMenu': typeof import("../components/FilterMenu.vue")['default'],
     'LazyHeader': typeof import("../components/Header.vue")['default'],
+    'LazyIconsLogo': typeof import("../components/icons/logo.vue")['default'],
+    'LazyIconsPeople': typeof import("../components/icons/people.vue")['default'],
+    'LazyIconsRocket': typeof import("../components/icons/rocket.vue")['default'],
     'LazyUiButton': typeof import("../components/ui/Button.vue")['default'],
     'LazyUiContainer': typeof import("../components/ui/Container.vue")['default'],
     'LazyUiIcon': typeof import("../components/ui/Icon.vue")['default'],
     'LazyUiSlider': typeof import("../components/ui/Slider.vue")['default'],
+    'LazyUiTable': typeof import("../components/ui/Table.vue")['default'],
     'LazyUiTypography': typeof import("../components/ui/Typography.vue")['default'],
     'LazyUiCardTitle': typeof import("../components/ui/Card/CardTitle.vue")['default'],
     'LazyUiCard': typeof import("../components/ui/Card/index.vue")['default'],
@@ -45,10 +53,14 @@ export const AboutUs: typeof import("../components/AboutUs.vue")['default']
 export const Chart: typeof import("../components/Chart.vue")['default']
 export const FilterMenu: typeof import("../components/FilterMenu.vue")['default']
 export const Header: typeof import("../components/Header.vue")['default']
+export const IconsLogo: typeof import("../components/icons/logo.vue")['default']
+export const IconsPeople: typeof import("../components/icons/people.vue")['default']
+export const IconsRocket: typeof import("../components/icons/rocket.vue")['default']
 export const UiButton: typeof import("../components/ui/Button.vue")['default']
 export const UiContainer: typeof import("../components/ui/Container.vue")['default']
 export const UiIcon: typeof import("../components/ui/Icon.vue")['default']
 export const UiSlider: typeof import("../components/ui/Slider.vue")['default']
+export const UiTable: typeof import("../components/ui/Table.vue")['default']
 export const UiTypography: typeof import("../components/ui/Typography.vue")['default']
 export const UiCardTitle: typeof import("../components/ui/Card/CardTitle.vue")['default']
 export const UiCard: typeof import("../components/ui/Card/index.vue")['default']
@@ -64,10 +76,14 @@ export const LazyAboutUs: typeof import("../components/AboutUs.vue")['default']
 export const LazyChart: typeof import("../components/Chart.vue")['default']
 export const LazyFilterMenu: typeof import("../components/FilterMenu.vue")['default']
 export const LazyHeader: typeof import("../components/Header.vue")['default']
+export const LazyIconsLogo: typeof import("../components/icons/logo.vue")['default']
+export const LazyIconsPeople: typeof import("../components/icons/people.vue")['default']
+export const LazyIconsRocket: typeof import("../components/icons/rocket.vue")['default']
 export const LazyUiButton: typeof import("../components/ui/Button.vue")['default']
 export const LazyUiContainer: typeof import("../components/ui/Container.vue")['default']
 export const LazyUiIcon: typeof import("../components/ui/Icon.vue")['default']
 export const LazyUiSlider: typeof import("../components/ui/Slider.vue")['default']
+export const LazyUiTable: typeof import("../components/ui/Table.vue")['default']
 export const LazyUiTypography: typeof import("../components/ui/Typography.vue")['default']
 export const LazyUiCardTitle: typeof import("../components/ui/Card/CardTitle.vue")['default']
 export const LazyUiCard: typeof import("../components/ui/Card/index.vue")['default']

@@ -1,0 +1,1 @@
+import{_ as e,o as n,c as o,r,n as c}from"./entry-50e32e66.mjs";const t={props:{spacing:"xs"|"sm"|"md"|"lg"|"xl"}};function _(a,l,s,p,i,d){return n(),o("div",{class:c(["row",[s.spacing&&`row_spacing-${s.spacing}`]])},[r(a.$slots,"default")],2)}var f=e(t,[["render",_]]);export{f as default};

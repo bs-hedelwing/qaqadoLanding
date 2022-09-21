@@ -1,0 +1,1 @@
+import t from"./Container-079e39b8.mjs";import{_ as o,o as n,c as _,a,w as c,b as r}from"./entry-50e32e66.mjs";const s={},i=r("img",{src:"/logo.png",width:"auto",height:"60px"},null,-1);function l(d,m){const e=t;return n(),_("header",null,[a(e,{class:"header"},{default:c(()=>[i]),_:1})])}var f=o(s,[["render",l]]);export{f as default};

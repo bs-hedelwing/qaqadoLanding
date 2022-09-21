@@ -5,12 +5,30 @@
 </template>
 
 <script>
+const breakpoints = ["xs", "sm", "md", "lg", "xl"];
 export default {
   props: {
     spacing: "xs" | "sm" | "md" | "lg" | "xl",
+    ...breakpoints.reduce(
+      (acc, cur) => ({ ...acc, [cur]: "xs" | "sm" | "md" | "lg" | "xl" }),
+      {}
+    ),
+  },
+
+  computed: {
+    breakpoints() {
+      return breakpoints
+        .map(
+          (breakpoint) =>
+            this[breakpoint] && `col-${breakpoint}-${this[breakpoint]}`
+        )
+        .filter((value) => value)
+        .join(" ");
+    },
   },
 };
 </script>
+
 
 <style lang="scss">
 @import "~/assets/variables.scss";
@@ -30,11 +48,25 @@ $sizes: (
   flex-wrap: wrap;
   @each $size, $value in $sizes {
     &_spacing-#{$size} {
-      margin: calc(-#{$value}px / 2) !important;
-      width: calc(100% + #{$value}px) !important;
+      margin: calc(-#{$value}px / 2);
+      width: calc(100% + #{$value}px);
 
       & > .col {
         padding: calc(#{$value}px / 2);
+      }
+    }
+  }
+  @each $breakpointSize, $breakpoint in $breakpoints {
+    @media (min-width: #{$breakpoint}px) {
+      @each $size, $value in $sizes {
+        &_spacing-#{$size}-#{$breakpointSize} {
+          margin: calc(-#{$value}px / 2);
+          width: calc(100% + #{$value}px);
+
+          & > .col {
+            padding: calc(#{$value}px / 2);
+          }
+        }
       }
     }
   }
@@ -50,11 +82,13 @@ $sizes: (
       width: calc(100% / #{$cols} * #{$i});
       flex-basis: calc(100% / #{$cols} * #{$i});
     }
-    @each $size, $breakpoint in $breakpoints {
-      @media (min-width: #{$breakpoint}px) {
+  }
+  @each $size, $breakpoint in $breakpoints {
+    @media (min-width: #{$breakpoint}px) {
+      @for $i from 1 through $cols {
         &-#{$size}-#{$i} {
-          width: calc(100% / #{$cols} * #{$i}) !important;
-          flex-basis: calc(100% / #{$cols} * #{$i}) !important;
+          width: calc(100% / #{$cols} * #{$i});
+          flex-basis: calc(100% / #{$cols} * #{$i});
         }
       }
     }

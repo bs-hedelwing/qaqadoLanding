@@ -20,12 +20,14 @@ const props = defineProps({
 </script>
 
 <style lang="scss">
+@import "~/assets/variables.scss";
+
 .card {
   padding: 20px 16px;
   background: #ffffff;
   border-radius: 15px;
 
-  @media (min-width: 767px) {
+  @media (min-width: #{map-get($breakpoints, "xl")}px) {
     padding: 30px 25px;
   }
 }

@@ -5,6 +5,7 @@
       size && `text-${size}`,
       gutterBottom && `text-gutter-${gutterBottom}`,
       weight && `text-weight-${weight}`,
+      `text-${color}`,
     ]"
   >
     <slot></slot>
@@ -22,6 +23,11 @@ export default {
     size: String,
     gutterBottom: String,
     weight: String,
+    color: {
+      type: String,
+      default: "primary",
+      validator: (value: string) => ["primary", "secondary"].includes(value),
+    },
   },
 };
 </script>
@@ -46,6 +52,12 @@ $weights: (
   "bold": 600,
 );
 
+$colors: (
+  "default": "#000",
+  "primary": "#1f87ff",
+  "secondary": "#878787",
+);
+
 @each $key, $size in $sizes {
   .text-#{$key} {
     font-size: #{$size}px;
@@ -61,6 +73,12 @@ $weights: (
 @each $key, $weight in $weights {
   .text-weight-#{$key} {
     font-weight: $weight;
+  }
+}
+
+@each $key, $color in $colors {
+  .text-#{$key} {
+    color: $color;
   }
 }
 </style>

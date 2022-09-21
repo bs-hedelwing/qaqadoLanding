@@ -22,11 +22,20 @@
 
 <script>
 export default {
-  data: () => ({
-    min: 10,
-    max: 20,
-    value: 15,
-  }),
+  props: {
+    min: {
+      type: Number,
+      default: 10,
+    },
+    max: {
+      type: Number,
+      default: 20,
+    },
+    value: {
+      type: Number,
+      default: 10,
+    },
+  },
 
   computed: {
     left() {

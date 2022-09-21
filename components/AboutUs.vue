@@ -1,105 +1,69 @@
 <template>
-  <section class="section">
+  <section class="section" style="background: #fafcff">
     <ui-container>
       <h2 class="section-title">
         <span> О нас </span>
       </h2>
-      <div class="row">
-        <div class="col cols-6">
+      <ui-grid-row spacing="lg">
+        <ui-grid-col :cols="12" :lg="6" v-for="(card, i) in cards" :key="i">
           <ui-card
             outlined
             style="display: flex; align-items: center; gap: 16px"
           >
-            <div class="icon-container">
-              <div class="icon">
-                <ui-icon :d="mdiCheck"></ui-icon>
-              </div>
+            <div>
+              <component class="icon" :is="card.icon" />
             </div>
             <div>
-              <h5 class="about-subtitle">Соцсетей много - платформа одна</h5>
+              <h5 class="about-subtitle">{{ card.title }}</h5>
               <p class="about-description">
-                Единая платформа для поиска, коммуникаций и взаимодейтсвия между
-                пользователями
+                {{ card.subtitle }}
               </p>
             </div>
           </ui-card>
-        </div>
-        <div class="col cols-6">
-          <ui-card
-            outlined
-            style="display: flex; align-items: center; gap: 16px"
-          >
-            <div class="icon-container">
-              <div class="icon"></div>
-            </div>
-            <div>
-              <h5 class="about-subtitle">Соцсетей много - платформа одна</h5>
-              <p class="about-description">
-                Единая платформа для поиска, коммуникаций и взаимодейтсвия между
-                пользователями
-              </p>
-            </div>
-          </ui-card>
-        </div>
-        <div class="col cols-6">
-          <ui-card
-            outlined
-            style="display: flex; align-items: center; gap: 16px"
-          >
-            <div class="icon-container">
-              <div class="icon"></div>
-            </div>
-            <div>
-              <h5 class="about-subtitle">Соцсетей много - платформа одна</h5>
-              <p class="about-description">
-                Единая платформа для поиска, коммуникаций и взаимодейтсвия между
-                пользователями
-              </p>
-            </div>
-          </ui-card>
-        </div>
-        <div class="col cols-6">
-          <ui-card
-            outlined
-            style="display: flex; align-items: center; gap: 16px"
-          >
-            <div class="icon-container">
-              <div class="icon"></div>
-            </div>
-            <div>
-              <h5 class="about-subtitle">Соцсетей много - платформа одна</h5>
-              <p class="about-description">
-                Единая платформа для поиска, коммуникаций и взаимодейтсвия между
-                пользователями
-              </p>
-            </div>
-          </ui-card>
-        </div>
-      </div>
+        </ui-grid-col>
+      </ui-grid-row>
     </ui-container>
   </section>
 </template>
 
 <script>
 import { mdiCheck } from "@mdi/js";
+import { IconsPeople, IconsRocket } from "~~/.nuxt/components";
 export default {
-  data: () => ({ mdiCheck }),
+  data: () => ({
+    mdiCheck,
+    cards: [
+      {
+        title: "Соцсетей много - платформа одна",
+        subtitle:
+          "Сделайте себя и свой контент доступным для аудитории, где бы вы ни находились",
+        icon: IconsRocket,
+      },
+      {
+        title: "Кроссеть",
+        subtitle:
+          "Расширяйте свою сеть профессиональных и личных контактов без ограничений",
+        icon: IconsPeople,
+      },
+      {
+        title: "Персональное представительство",
+        subtitle:
+          "Единая платформа для поиска, коммуникаций и взаимодейтсвия между пользователями",
+      },
+      {
+        title: "Платежи и услуги",
+        subtitle:
+          "Принимайте пожертвования и оказывайте услуги с минимальными комиссиями",
+      },
+    ],
+  }),
 };
 </script>
 
 <style lang="scss">
 .icon {
-  background: #edf3fc;
   width: 112px;
   height: 112px;
-  border-radius: 50%;
-}
-
-.icon-container {
-  display: inline-block;
-  padding: 12px;
-  border-radius: 50%;
-  border: 4px solid #edf3fc;
 }
 
 .about-subtitle {

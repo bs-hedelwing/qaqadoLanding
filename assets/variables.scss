@@ -1,6 +1,9 @@
 $breakpoints: (
-    "sm": 375,
+    "xs": 375,
+    "sm": 540,
     "md": 768,
     "lg": 1024,
     "xl": 1440,
 );
+
+$primary: #1f87ff;
