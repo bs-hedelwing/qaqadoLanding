@@ -5,6 +5,8 @@ declare module 'vue' {
     'Chart': typeof import("../components/Chart.vue")['default'],
     'FilterMenu': typeof import("../components/FilterMenu.vue")['default'],
     'Header': typeof import("../components/Header.vue")['default'],
+    'Roadmap': typeof import("../components/Roadmap.vue")['default'],
+    'IconsHero': typeof import("../components/icons/hero.vue")['default'],
     'IconsLogo': typeof import("../components/icons/logo.vue")['default'],
     'IconsPeople': typeof import("../components/icons/people.vue")['default'],
     'IconsRocket': typeof import("../components/icons/rocket.vue")['default'],
@@ -28,6 +30,8 @@ declare module 'vue' {
     'LazyChart': typeof import("../components/Chart.vue")['default'],
     'LazyFilterMenu': typeof import("../components/FilterMenu.vue")['default'],
     'LazyHeader': typeof import("../components/Header.vue")['default'],
+    'LazyRoadmap': typeof import("../components/Roadmap.vue")['default'],
+    'LazyIconsHero': typeof import("../components/icons/hero.vue")['default'],
     'LazyIconsLogo': typeof import("../components/icons/logo.vue")['default'],
     'LazyIconsPeople': typeof import("../components/icons/people.vue")['default'],
     'LazyIconsRocket': typeof import("../components/icons/rocket.vue")['default'],
@@ -53,6 +57,8 @@ export const AboutUs: typeof import("../components/AboutUs.vue")['default']
 export const Chart: typeof import("../components/Chart.vue")['default']
 export const FilterMenu: typeof import("../components/FilterMenu.vue")['default']
 export const Header: typeof import("../components/Header.vue")['default']
+export const Roadmap: typeof import("../components/Roadmap.vue")['default']
+export const IconsHero: typeof import("../components/icons/hero.vue")['default']
 export const IconsLogo: typeof import("../components/icons/logo.vue")['default']
 export const IconsPeople: typeof import("../components/icons/people.vue")['default']
 export const IconsRocket: typeof import("../components/icons/rocket.vue")['default']
@@ -76,6 +82,8 @@ export const LazyAboutUs: typeof import("../components/AboutUs.vue")['default']
 export const LazyChart: typeof import("../components/Chart.vue")['default']
 export const LazyFilterMenu: typeof import("../components/FilterMenu.vue")['default']
 export const LazyHeader: typeof import("../components/Header.vue")['default']
+export const LazyRoadmap: typeof import("../components/Roadmap.vue")['default']
+export const LazyIconsHero: typeof import("../components/icons/hero.vue")['default']
 export const LazyIconsLogo: typeof import("../components/icons/logo.vue")['default']
 export const LazyIconsPeople: typeof import("../components/icons/people.vue")['default']
 export const LazyIconsRocket: typeof import("../components/icons/rocket.vue")['default']

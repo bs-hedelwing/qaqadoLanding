@@ -37,23 +37,25 @@ export default {
         title: "Соцсетей много - платформа одна",
         subtitle:
           "Сделайте себя и свой контент доступным для аудитории, где бы вы ни находились",
-        icon: IconsRocket,
+        icon: shallowRef(IconsRocket),
       },
       {
         title: "Кроссеть",
         subtitle:
           "Расширяйте свою сеть профессиональных и личных контактов без ограничений",
-        icon: IconsPeople,
+        icon: shallowRef(IconsPeople),
       },
       {
         title: "Персональное представительство",
         subtitle:
           "Единая платформа для поиска, коммуникаций и взаимодейтсвия между пользователями",
+        icon: shallowRef(IconsRocket),
       },
       {
         title: "Платежи и услуги",
         subtitle:
           "Принимайте пожертвования и оказывайте услуги с минимальными комиссиями",
+        icon: shallowRef(IconsPeople),
       },
     ],
   }),

@@ -12,7 +12,6 @@
   </component>
 </template>
 
-
 <script lang="ts">
 export default {
   props: {
@@ -25,13 +24,13 @@ export default {
     weight: String,
     color: {
       type: String,
-      default: "primary",
-      validator: (value: string) => ["primary", "secondary"].includes(value),
+      default: "default",
+      validator: (value: string) =>
+        ["default", "primary", "secondary"].includes(value),
     },
   },
 };
 </script>
-
 
 <style lang="scss">
 $sizes: (

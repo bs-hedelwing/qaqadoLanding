@@ -1,0 +1,1 @@
+import{_ as o,o as t,c as n,j as c}from"./entry-acc6915a.mjs";const r={},s={class:"container"};function _(e,a){return t(),n("div",s,[c(e.$slots,"default")])}var d=o(r,[["render",_]]);export{d as default};

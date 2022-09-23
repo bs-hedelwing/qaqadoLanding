@@ -10,7 +10,7 @@ type NuxtAppInjections =
   InjectionType<typeof import("../../node_modules/nuxt/dist/head/runtime/lib/vueuse-head.plugin").default> &
   InjectionType<typeof import("../../node_modules/nuxt/dist/head/runtime/plugin").default> &
   InjectionType<typeof import("../../node_modules/nuxt/dist/pages/runtime/router").default> &
-  InjectionType<typeof import("../dist.plugin.68d82e9e").default>
+  InjectionType<typeof import("../dist.plugin.6186a658").default>
 
 declare module '#app' {
   interface NuxtApp extends NuxtAppInjections { }
