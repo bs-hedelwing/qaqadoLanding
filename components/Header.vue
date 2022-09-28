@@ -1,7 +1,7 @@
 <template>
-  <header>
-    <ui-container class="header">
-      <img src="/logo.png" width="auto" height="60px" />
+  <header ref="header" :class="state.classes">
+    <ui-container class="header__container">
+      <img src="/logo.png" class="header__logo" />
 
       <nav>
         <ul class="list">
@@ -11,7 +11,7 @@
         </ul>
       </nav>
 
-      <ui-button outlined>Вход</ui-button>
+      <ui-button size="md" outlined>Вход</ui-button>
     </ui-container>
   </header>
 </template>
@@ -31,19 +31,47 @@ const links = [
     src: "#roadmap",
   },
 ];
+
+const header = ref();
+
+const state = reactive({ classes: ["header"] });
+
+onMounted(() => {
+  window.addEventListener("scroll", (e) => {
+    if (pageYOffset > 100) state.classes.push("header_sticked");
+    else
+      state.classes = state.classes.filter((cls) => cls !== "header_sticked");
+  });
+});
+onUnmounted(() => {});
 </script>
 
 <style lang="scss">
 .header {
-  min-height: 92px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  transition: .2s ease;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 100;
+  font-size: 20px;
+  &__container {
+    height: 92px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__logo {
+    height: 3em;
+    width: auto;
+  }
+  &_sticked {
+    .header__container {
+      height: 72px;
+    }
+    background: white;
+    font-size: 16px;
+  }
 }
 
 .list {
@@ -57,6 +85,7 @@ const links = [
     a {
       color: black;
       font-size: 18px;
+      font-weight: 500;
       text-decoration: none;
     }
   }

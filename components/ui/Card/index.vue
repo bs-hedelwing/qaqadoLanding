@@ -37,7 +37,7 @@ const props = defineProps({
 }
 
 .primary {
-  background: #d7e1f7;
+  background: $secondary;
 }
 
 .outlined {

@@ -315,12 +315,6 @@ const statistics = [
   }
 }
 
-.roadmap {
-  height: 1100px;
-  background-image: url("roadmap.svg");
-  background-repeat: repeat-x;
-}
-
 .statictics-title {
   font-size: 30px;
   line-height: 1em;

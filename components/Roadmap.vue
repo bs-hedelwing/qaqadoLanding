@@ -11,12 +11,16 @@
             :cols="4"
             v-for="(goal, i) in goals"
             :key="i"
-            style="min-height: 395px; text-align: center"
+            style="text-align: ; /*center */"
           >
-            <h5 class="roadmap__goal-title" style="margin: 0">
-              <span>{{ goal.date }}</span>
-            </h5>
-            <div class="checkbox"></div>
+            <div>
+              <h5 class="roadmap__goal-title" style="margin: 0">
+                <span>{{ goal.date }}</span>
+              </h5>
+              <div>
+                <div class="checkbox"></div>
+              </div>
+            </div>
             <ui-card primary style="max-width: 300px; display: inline-block">
               <p>{{ goal.mission }}</p>
             </ui-card>
@@ -74,12 +78,6 @@ const goals = [
 </script>
 
 <style scoped lang="scss">
-.roadmap {
-  background-image: url("/roadmap.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
 .checkbox {
   width: 52px;
   height: 52px;
@@ -114,12 +112,19 @@ const goals = [
 
 .roadmap-grid {
   display: grid;
-  grid-template-rows: repeat(3, 280px);
+  grid-gap: 36px;
 }
 
 @media (min-width: 767px) {
+  .roadmap {
+    background-image: url("/roadmap-tablet.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
   .roadmap-grid {
+    grid-gap: 20px;
     grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(3, 370px) auto;
   }
   .roadmap-grid__item:nth-child(1) {
     grid-column: 1 / 7;
@@ -162,10 +167,23 @@ const goals = [
   }
 }
 
-@media (min-width: 1377px) {
+@media (min-width: 1024px) {
+  .roadmap {
+    background-position-y: -25px;
+  }
+  .roadmap-grid {
+    grid-template-rows: repeat(3, 515px) auto;
+  }
+}
+
+@media (min-width: 1440px) {
+  .roadmap {
+    background-image: url("/roadmap.svg");
+    background-position-y: top;
+  }
   .roadmap-grid {
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(3, 395px);
+    grid-template-rows: repeat(3, 380px);
   }
   .roadmap-grid__item:nth-child(1) {
     grid-column: 1 / 5;
