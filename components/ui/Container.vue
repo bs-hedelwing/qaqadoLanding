@@ -18,7 +18,7 @@ $padding: 12;
 $max-width: (
   "md": 720,
   "lg": 980,
-  "xl": 1324,
+  "xl": 1300,
 );
 
 @each $key, $value in $breakpoints {

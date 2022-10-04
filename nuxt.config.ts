@@ -23,5 +23,7 @@ export default defineNuxtConfig((nuxtApp) => ({
     },
   },
 
+  plugins: [{ src: "~/plugins/breakpoints.ts", mode: "client" }],
+
   css: ["~~/assets/main.scss"],
 }));

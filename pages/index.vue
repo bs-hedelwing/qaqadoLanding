@@ -14,12 +14,13 @@
           padding-bottom: 32px;
         "
       >
-        <div
+        <ui-grid-row
+          spacing="lg"
           class="hero"
           style="display: flex; align-items: center; height: 100%; flex-grow: 1"
         >
-          <div class="hero__content">
-            <div style="display: grid; grid-gap: 28px">
+          <ui-grid-col :cols="6" class="hero__content">
+            <div style="display: grid; grid-gap: 32px">
               <h1 class="main-title">
                 <span class="text-primary">Единая платформа</span> для
                 взаимодействия с социальными сетями
@@ -29,16 +30,16 @@
                 криптовалюты.
               </p>
               <div>
-                <ui-button> Подробнее </ui-button>
+                <ui-button size="lg"> Подробнее </ui-button>
               </div>
             </div>
-          </div>
-          <div class="hero__image-container">
+          </ui-grid-col>
+          <ui-grid-col :cols="6" class="hero__image-container">
             <icons-hero class="hero__image" />
-          </div>
-        </div>
+          </ui-grid-col>
+        </ui-grid-row>
 
-        <div style="padding-top: 40px">
+        <div style="padding-top: 36px">
           <ui-grid-row spacing="lg">
             <ui-grid-col
               :cols="12"
@@ -47,11 +48,16 @@
               v-for="(statistic, i) in statistics"
               :key="i"
             >
-              <ui-card primary style="text-align: center">
+              <ui-card
+                primary
+                style="text-align: center; height: 100%; padding: 16px 30px"
+              >
                 <h5 class="statictics-title text-primary">
                   {{ statistic.title }}
                 </h5>
-                <p>{{ statistic.subtitle }}</p>
+                <ui-typography size="lg">{{
+                  statistic.subtitle
+                }}</ui-typography>
               </ui-card>
             </ui-grid-col></ui-grid-row
           >
@@ -97,7 +103,7 @@
             </ui-grid-row>
           </ui-grid-col>
           <ui-grid-col :cols="12" :lg="6">
-            <ui-card>
+            <ui-card style="display: grid; grid-gap: 40px">
               <div style="display: flex; justify-content: space-between">
                 <div>Всего продано токенов:</div>
                 <div>Текущий период: 1/10</div>
@@ -106,13 +112,16 @@
               <ui-slider></ui-slider>
 
               <div style="text-align: center">
-                <ui-typography size="lg" gutterBottom="sm" weight="bold">
+                <ui-typography size="lg" gutterBottom="md" weight="bold">
                   Текущая стоимость 1 536 $
                 </ui-typography>
                 <ui-typography size="md" gutterBottom="lg">
                   Станьте партнером и получите до 20% дохода от продаж
                 </ui-typography>
-                <ui-button>Купить токен</ui-button>
+                <div>
+                  <ui-button size="lg">Купить токен</ui-button>
+                  <ui-button size="lg" outlined>Вход</ui-button>
+                </div>
               </div>
             </ui-card>
           </ui-grid-col>
@@ -271,16 +280,16 @@ const statistics = [
 
 .main-title {
   font-size: 28px;
-  line-height: 1.4em;
+  line-height: 1.2em;
   font-weight: 600;
   @media (min-width: #{map-get($breakpoints, "md")}px) {
     font-size: 36px;
   }
   @media (min-width: #{map-get($breakpoints, "lg")}px) and (orientation: portrait) {
-    font-size: 48px;
+    font-size: 42px;
   }
   @media (min-width: #{map-get($breakpoints, "xl")}px) {
-    line-height: 1.6em;
+    line-height: 1.4em;
     font-size: 48px;
   }
 }
@@ -292,7 +301,6 @@ const statistics = [
 
 .section-title {
   font-size: 35px;
-  line-height: 1.5em;
   margin-bottom: 1.8em;
   font-weight: 600;
   letter-spacing: 0.09em;
@@ -300,6 +308,7 @@ const statistics = [
 
   span {
     display: inline-block;
+    padding-bottom: 0.25em;
     position: relative;
 
     &:after {

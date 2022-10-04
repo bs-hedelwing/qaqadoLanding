@@ -183,7 +183,7 @@ const goals = [
   }
   .roadmap-grid {
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(3, 380px);
+    grid-template-rows: repeat(3, 372px);
   }
   .roadmap-grid__item:nth-child(1) {
     grid-column: 1 / 5;

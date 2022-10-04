@@ -78,7 +78,7 @@ $background: rgba(123, 180, 253, 0.38);
 }
 
 .slider {
-  padding-top: 80px;
+  padding-top: 52px;
   &__container {
     position: relative;
   }

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="frame" style="padding-top: 92px">
     <Header />
 
     <section>
@@ -24,7 +24,32 @@
               </div>
             </ui-card>
           </ui-grid-col>
-          <ui-grid-col :cols="12" :lg="8"> <ui-card> 2 </ui-card></ui-grid-col>
+          <ui-grid-col :cols="12" :lg="8">
+            <ui-card>
+              <ui-grid-row spacing="lg">
+                <ui-grid-col :cols="6">
+                  <div class="icon-container">
+                    <div class="icon">
+                      <icons-logo />
+                    </div>
+                  </div>
+                </ui-grid-col>
+                <ui-grid-col :cols="6" style="display: grid; grid-gap: 20px">
+                  <div>
+                    <ui-typography gutter-bottom="sm">
+                      Название токена: QAQADO
+                    </ui-typography>
+                    <ui-typography> Tiket Symbol: QQD </ui-typography>
+                  </div>
+                  <div>
+                    <ui-button color="primary" size="lg">
+                      Загрузить Whitepaper
+                    </ui-button>
+                  </div>
+                </ui-grid-col>
+              </ui-grid-row>
+            </ui-card>
+          </ui-grid-col>
 
           <ui-grid-col :cols="12" :lg="8">
             <ui-card>
@@ -154,11 +179,6 @@
                     summ: '10',
                     date: '20.08.2022',
                     title: 'Назначение',
-                  },                  {
-                    amount: 'Кол-во токенов',
-                    summ: '10',
-                    date: '20.08.2022',
-                    title: 'Назначение',
                   },
                   {
                     amount: 'Кол-во токенов',
@@ -177,7 +197,14 @@
                     summ: '10',
                     date: '20.08.2022',
                     title: 'Назначение',
-                  },                  {
+                  },
+                  {
+                    amount: 'Кол-во токенов',
+                    summ: '10',
+                    date: '20.08.2022',
+                    title: 'Назначение',
+                  },
+                  {
                     amount: 'Кол-во токенов',
                     summ: '10',
                     date: '20.08.2022',
@@ -243,15 +270,6 @@ export default {
 </script>
 
 <style lang="scss">
-body {
-  background-image: linear-gradient(
-    80.15deg,
-    #dce1f8 0%,
-    #fbefed 52.47%,
-    #cadbff 100%
-  );
-}
-
 .token-logo {
   border: 4px solid #deebff;
   border-radius: 50%;

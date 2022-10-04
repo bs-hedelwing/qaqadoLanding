@@ -1,7 +1,9 @@
 <template>
   <header ref="header" :class="state.classes">
     <ui-container class="header__container">
-      <img src="/logo.png" class="header__logo" />
+      <nuxt-link href="/"
+        ><img src="/logo.png" class="header__logo"
+      /></nuxt-link>
 
       <nav>
         <ul class="list">
@@ -36,19 +38,23 @@ const header = ref();
 
 const state = reactive({ classes: ["header"] });
 
+const onScroll = (e) => {
+  if (pageYOffset > 100) state.classes.push("header_sticked");
+  else state.classes = state.classes.filter((cls) => cls !== "header_sticked");
+};
+
 onMounted(() => {
-  window.addEventListener("scroll", (e) => {
-    if (pageYOffset > 100) state.classes.push("header_sticked");
-    else
-      state.classes = state.classes.filter((cls) => cls !== "header_sticked");
-  });
+  window.addEventListener("scroll", onScroll);
 });
-onUnmounted(() => {});
+
+onUnmounted(() => {
+  window.removeEventListener("scroll", onScroll);
+});
 </script>
 
 <style lang="scss">
 .header {
-  transition: .2s ease;
+  transition: 0.2s ease;
   position: fixed;
   top: 0;
   left: 0;
